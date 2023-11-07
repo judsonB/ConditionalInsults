@@ -1,0 +1,2 @@
+# ConditionalInsults
+Shakespearean Insult Generator

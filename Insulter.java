@@ -6,6 +6,22 @@ public class Insulter
         String randWord2 = get2ndWord();
         String randWord3 = get3rdWord();
         System.out.println("Thou "+randWord1+" "+randWord2+" "+randWord3+"!");
+        /*
+        //The following brute-forces the first 1000 combinations.
+        for(int i = 0; i < 10; i++)
+        {
+            for(int j = 0; j < 10; j++)
+            {
+                for(int k = 0; k < 10; k++)
+                {
+                    String randWord1 = get1stWord(i);
+                    String randWord2 = get2ndWord(j);
+                    String randWord3 = get3rdWord(k);
+                    System.out.println((i*100+j*10+k)+" - Thou "+randWord1+" "+randWord2+" "+randWord3+"!");
+                }
+            }
+        }
+        */
     }
     public static int random_range(int min, int max)
     {
@@ -17,6 +33,10 @@ public class Insulter
         int min = 0;
         int max = 10;
         int rand = random_range(min, max);
+        return get1stWord(rand);
+    }
+    public static String get1stWord(int rand)
+    {
         switch(rand)
         {
             case 0: return "artless";
@@ -38,6 +58,10 @@ public class Insulter
         int min = 0;
         int max = 10;
         int rand = random_range(min, max);
+        return get2ndWord(rand);
+    }
+    public static String get2ndWord(int rand)
+    {
         switch(rand)
         {
             case 0: return "base-court";
@@ -59,6 +83,10 @@ public class Insulter
         int min = 0;
         int max = 10;
         int rand = random_range(min, max);
+        return get3rdWord(rand);
+    }
+    public static String get3rdWord(int rand)
+    {
         switch(rand)
         {
             case 0: return "apple-john";
